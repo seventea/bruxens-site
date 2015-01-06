@@ -1,12 +1,101 @@
 !!!
 %html
   %head
-    %meta{charset: "utf-8"}
+    %meta{:charset => "utf-8"}
     %meta{content: "IE=edge,chrome=1", http: {equiv: "X-UA-Compatible"}}
+    %meta{:content => "Vintage Countryside Apparel", :name => "description"}
+    %meta{:content => "Seventea Studios", :name => "author"}
     %meta{name: "viewport", content: "width=device-width, initial-scale=1"}
-    %title= current_page.data.title || "The Middleman"
+    %title Bruxens
+    %link{:href => "http://fonts.googleapis.com/css?family=Roboto+Slab:300", :rel => "stylesheet", :type => "text/css"}
     = stylesheet_link_tag "application"
-
+    /[if lt IE 9]
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    %link{:href => "assets/images/favicons/favicon-32.png", :rel => "icon", :sizes => "32x32"}
+    / Touch icon for iOS 2.0+ and Android 2.1+:
+    %link{:href => "assets/images/favicons/favicon-152.png", :rel => "apple-touch-icon-precomposed"}
+    / IE 10 Metro tile icon (Metro equivalent of apple-touch-icon)
+    %meta{:content => "#000000", :name => "msapplication-TileColor"}
+    %meta{:content => "assets/images/favicons/favicon-144.png", :name => "msapplication-TileImage"}
+    / For iPad with high-resolution Retina display running iOS ≥ 7:
+    %link{:href => "assets/images/favicons/favicon-152.png", :rel => "apple-touch-icon-precomposed", :sizes => "152x152"}
+    / For iPad with high-resolution Retina display running iOS ≤ 6:
+    %link{:href => "assets/images/favicons/favicon-144.png", :rel => "apple-touch-icon-precomposed", :sizes => "144x144"}
+    / For iPhone with high-resolution Retina display running iOS ≥ 7:
+    %link{:href => "assets/images/favicons/favicon-120.png", :rel => "apple-touch-icon-precomposed", :sizes => "120x120"}
+    / For iPhone with high-resolution Retina display running iOS ≤ 6:
+    %link{:href => "assets/images/favicons/favicon-114.png", :rel => "apple-touch-icon-precomposed", :sizes => "114x114"}
+    / For first- and second-generation iPad:
+    %link{:href => "assets/images/favicons/favicon-72.png", :rel => "apple-touch-icon-precomposed", :sizes => "72x72"}
+    / For non-Retina iPhone, iPod Touch, and Android 2.1+ devices:
+    %link{:href => "assets/images/favicons/favicon-57.png", :rel => "apple-touch-icon-precomposed"}
+    / Facebook share settings
+    %meta{:content => "http://bruxens.co.uk", :property => "og:url"}/
+    %meta{:content => "Bruxens", :property => "og:title"}/
+    %meta{:content => "Vintage Countryside Apparel", :property => "og:description"}/
+    %meta{:content => "http://bruxens.co.uk/assets/images/facebook_share_images/skull.jpg", :property => "og:image"}/
   %body{class: page_classes}
+    :javascript
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-57426935-1', 'auto');
+      ga('send', 'pageview');
     = yield
+    .content-head
+      %a{:href => ""}
+        %h1.logo Bruxens
+      .description
+        %p
+          Back in 2013, two friends with distinct expertise decided to transform a vintage garage store into a
+          Screenprint
+          workshop. One known as "the ink" and the other as "the scissor hand", Apostolis and Andreas created the
+          vintage
+          line known as Bruxens.
+        %p
+          Born and raised in the city centers of Brussels and Athens, they share a passion for music, bikes and
+          old-fashion styles. The inevitable clash of vintage inspiration and modern city life impelled them to escape
+          to
+          the countryside. 
+        %p
+          Their concept was simple; any person that shared their passions could be a 'Member of the Band'.
+    .content-foot
+      %a.etsy-link.clip-triangle{:href => "https://www.etsy.com/shop/Bruxens", :target => "_blank"}
+        %img.shop_icon{:src => "assets/images/shop_icon.png"}/
+      %a.facebook-link.clip-triangle-reverse{:href => "https://www.facebook.com/wearebruxens", :target => "_blank"}
+      %a.instagram-link.clip-triangle{:href => "http://instagram.com/bruxens", :target => "_blank"}
+      %a.pinterest-link.clip-triangle-reverse{:href => "http://www.pinterest.com/bruxens/", :target => "_blank"}
+      %a.twitter-link.clip-triangle{:href => "https://twitter.com/bruxens", :target => "_blank"}
+    .content-friends
+      %a{:href => "http://www.seventeastudios.com/", :target => "_blank"}
+        %img{:src => "assets/images/seventea_btn.png"}/
+      %a{:href => "http://archivist.fm/", :target => "_blank"}
+        %img{:src => "assets/images/archivist_btn.png"}/
+      %a{:href => "http://getafterpoint.com/", :target => "_blank"}
+        %img{:src => "assets/images/afterpoint_btn.png"}/
+    %img{:src => "assets/images/etsy_orange.png", :style => "position: absolute; width: 1px; height: 1px"}/
+    %img{:src => "assets/images/facebook_blue.png", :style => "position: absolute; width: 1px; height: 1px"}/
+    %img{:src => "assets/images/instagram_colour.png", :style => "position: absolute; width: 1px; height: 1px"}/
+    %img{:src => "assets/images/pinterest_red.png", :style => "position: absolute; width: 1px; height: 1px"}/
+    %img{:src => "assets/images/twitter_blue.png", :style => "position: absolute; width: 1px; height: 1px"}/
+    .background.background-01
+    .background.background-02
+    .background.background-03
+    .background.background-04
+    .background.background-05
+    .background.background-06
+    .background.background-07
+    .background.background-08
+    .background.background-09
+    .background.background-10
+    .background.background-11
+    .background.background-12
+    .background.background-13
+    .background.background-14
+    .background.background-15
+    .background.background-16
+    .background.background-17
     = javascript_include_tag "application"
+
