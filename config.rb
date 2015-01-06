@@ -23,9 +23,20 @@ configure :build do
   activate :imageoptim
 end
 
-activate :deploy do |deploy|
-  deploy.build_before = true
-  deploy.method = :git
+case ENV['TARGET'].to_s.downcase
+  when 'production'
+    activate :deploy do |deploy|
+      deploy.build_before = true
+      deploy.method = :git
+      deploy.remote   = 'git@github.com:seventea/bruxens-site.git'
+    end
+  else
+    ignore 'CNAME'
+    activate :deploy do |deploy|
+      deploy.build_before = true
+      deploy.method = :git
+      deploy.remote   = 'git@github.com:seventea/bruxens-site-staging.git'
+    end
 end
 
 helpers do
